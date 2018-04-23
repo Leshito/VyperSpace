@@ -45,22 +45,6 @@ private:
 
     char input = '_';
 
-    const Eigen::Vector4f cornerFTL;
-
-    const Eigen::Vector4f cornerFTR;
- 
-    const Eigen::Vector4f cornerFBL;
-
-    const Eigen::Vector4f cornerFBR;
-
-    const Eigen::Vector4f cornerBTL;
-
-    const Eigen::Vector4f cornerBTR;
-
-    const Eigen::Vector4f cornerBBL;
-
-    const Eigen::Vector4f cornerBBR;
-
 
 public:
 
@@ -94,6 +78,8 @@ public:
 
         // start the timer
         m_stopWatch.reset();
+
+        //m_viewer.CloudVisualizer::addCuboid(cornerFTL, cornerFTR, cornerFBL, cornerFBR, cornerBTL, cornerBTR, cornerBBL, cornerBBR);
         
         // wait until user quits program
         while (!m_viewer.wasStopped())

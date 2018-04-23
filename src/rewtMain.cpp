@@ -14,9 +14,7 @@
 #include <pcl/visualization/pcl_visualizer.h>
 #include <boost/thread/thread.hpp>
 #include <pcl/filters/voxel_grid.h>
-#include "random_sample_consensus.h"
 #include "voxel_grid.h"
-#include "load_pcd.h"
 #include "plane_seg.h"
 #include "cluster_extraction.h"
 #include "passthrough.h"
