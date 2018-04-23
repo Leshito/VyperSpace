@@ -204,33 +204,6 @@ src/correspondence_grouping.cpp.s:
 	$(MAKE) -f CMakeFiles/visualizer.dir/build.make CMakeFiles/visualizer.dir/src/correspondence_grouping.cpp.s
 .PHONY : src/correspondence_grouping.cpp.s
 
-src/load_pcd.o: src/load_pcd.cpp.o
-
-.PHONY : src/load_pcd.o
-
-# target to build an object file
-src/load_pcd.cpp.o:
-	$(MAKE) -f CMakeFiles/visualizer.dir/build.make CMakeFiles/visualizer.dir/src/load_pcd.cpp.o
-.PHONY : src/load_pcd.cpp.o
-
-src/load_pcd.i: src/load_pcd.cpp.i
-
-.PHONY : src/load_pcd.i
-
-# target to preprocess a source file
-src/load_pcd.cpp.i:
-	$(MAKE) -f CMakeFiles/visualizer.dir/build.make CMakeFiles/visualizer.dir/src/load_pcd.cpp.i
-.PHONY : src/load_pcd.cpp.i
-
-src/load_pcd.s: src/load_pcd.cpp.s
-
-.PHONY : src/load_pcd.s
-
-# target to generate assembly for a file
-src/load_pcd.cpp.s:
-	$(MAKE) -f CMakeFiles/visualizer.dir/build.make CMakeFiles/visualizer.dir/src/load_pcd.cpp.s
-.PHONY : src/load_pcd.cpp.s
-
 src/outputPoints.o: src/outputPoints.cpp.o
 
 .PHONY : src/outputPoints.o
@@ -311,33 +284,6 @@ src/plane_seg.s: src/plane_seg.cpp.s
 src/plane_seg.cpp.s:
 	$(MAKE) -f CMakeFiles/visualizer.dir/build.make CMakeFiles/visualizer.dir/src/plane_seg.cpp.s
 .PHONY : src/plane_seg.cpp.s
-
-src/random_sample_consensus.o: src/random_sample_consensus.cpp.o
-
-.PHONY : src/random_sample_consensus.o
-
-# target to build an object file
-src/random_sample_consensus.cpp.o:
-	$(MAKE) -f CMakeFiles/visualizer.dir/build.make CMakeFiles/visualizer.dir/src/random_sample_consensus.cpp.o
-.PHONY : src/random_sample_consensus.cpp.o
-
-src/random_sample_consensus.i: src/random_sample_consensus.cpp.i
-
-.PHONY : src/random_sample_consensus.i
-
-# target to preprocess a source file
-src/random_sample_consensus.cpp.i:
-	$(MAKE) -f CMakeFiles/visualizer.dir/build.make CMakeFiles/visualizer.dir/src/random_sample_consensus.cpp.i
-.PHONY : src/random_sample_consensus.cpp.i
-
-src/random_sample_consensus.s: src/random_sample_consensus.cpp.s
-
-.PHONY : src/random_sample_consensus.s
-
-# target to generate assembly for a file
-src/random_sample_consensus.cpp.s:
-	$(MAKE) -f CMakeFiles/visualizer.dir/build.make CMakeFiles/visualizer.dir/src/random_sample_consensus.cpp.s
-.PHONY : src/random_sample_consensus.cpp.s
 
 src/rewtMain.o: src/rewtMain.cpp.o
 
@@ -465,9 +411,6 @@ help:
 	@echo "... src/correspondence_grouping.o"
 	@echo "... src/correspondence_grouping.i"
 	@echo "... src/correspondence_grouping.s"
-	@echo "... src/load_pcd.o"
-	@echo "... src/load_pcd.i"
-	@echo "... src/load_pcd.s"
 	@echo "... src/outputPoints.o"
 	@echo "... src/outputPoints.i"
 	@echo "... src/outputPoints.s"
@@ -477,9 +420,6 @@ help:
 	@echo "... src/plane_seg.o"
 	@echo "... src/plane_seg.i"
 	@echo "... src/plane_seg.s"
-	@echo "... src/random_sample_consensus.o"
-	@echo "... src/random_sample_consensus.i"
-	@echo "... src/random_sample_consensus.s"
 	@echo "... src/rewtMain.o"
 	@echo "... src/rewtMain.i"
 	@echo "... src/rewtMain.s"

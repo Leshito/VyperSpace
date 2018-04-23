@@ -129,33 +129,9 @@ CMakeFiles/visualizer.dir/src/CloudVisualizer.cpp.o.provides: CMakeFiles/visuali
 CMakeFiles/visualizer.dir/src/CloudVisualizer.cpp.o.provides.build: CMakeFiles/visualizer.dir/src/CloudVisualizer.cpp.o
 
 
-CMakeFiles/visualizer.dir/src/random_sample_consensus.cpp.o: CMakeFiles/visualizer.dir/flags.make
-CMakeFiles/visualizer.dir/src/random_sample_consensus.cpp.o: ../src/random_sample_consensus.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luish/Schoolz/SD/VyperSpace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/visualizer.dir/src/random_sample_consensus.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/visualizer.dir/src/random_sample_consensus.cpp.o -c /home/luish/Schoolz/SD/VyperSpace/src/random_sample_consensus.cpp
-
-CMakeFiles/visualizer.dir/src/random_sample_consensus.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/visualizer.dir/src/random_sample_consensus.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luish/Schoolz/SD/VyperSpace/src/random_sample_consensus.cpp > CMakeFiles/visualizer.dir/src/random_sample_consensus.cpp.i
-
-CMakeFiles/visualizer.dir/src/random_sample_consensus.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/visualizer.dir/src/random_sample_consensus.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luish/Schoolz/SD/VyperSpace/src/random_sample_consensus.cpp -o CMakeFiles/visualizer.dir/src/random_sample_consensus.cpp.s
-
-CMakeFiles/visualizer.dir/src/random_sample_consensus.cpp.o.requires:
-
-.PHONY : CMakeFiles/visualizer.dir/src/random_sample_consensus.cpp.o.requires
-
-CMakeFiles/visualizer.dir/src/random_sample_consensus.cpp.o.provides: CMakeFiles/visualizer.dir/src/random_sample_consensus.cpp.o.requires
-	$(MAKE) -f CMakeFiles/visualizer.dir/build.make CMakeFiles/visualizer.dir/src/random_sample_consensus.cpp.o.provides.build
-.PHONY : CMakeFiles/visualizer.dir/src/random_sample_consensus.cpp.o.provides
-
-CMakeFiles/visualizer.dir/src/random_sample_consensus.cpp.o.provides.build: CMakeFiles/visualizer.dir/src/random_sample_consensus.cpp.o
-
-
 CMakeFiles/visualizer.dir/src/voxel_grid.cpp.o: CMakeFiles/visualizer.dir/flags.make
 CMakeFiles/visualizer.dir/src/voxel_grid.cpp.o: ../src/voxel_grid.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luish/Schoolz/SD/VyperSpace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/visualizer.dir/src/voxel_grid.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luish/Schoolz/SD/VyperSpace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/visualizer.dir/src/voxel_grid.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/visualizer.dir/src/voxel_grid.cpp.o -c /home/luish/Schoolz/SD/VyperSpace/src/voxel_grid.cpp
 
 CMakeFiles/visualizer.dir/src/voxel_grid.cpp.i: cmake_force
@@ -177,33 +153,9 @@ CMakeFiles/visualizer.dir/src/voxel_grid.cpp.o.provides: CMakeFiles/visualizer.d
 CMakeFiles/visualizer.dir/src/voxel_grid.cpp.o.provides.build: CMakeFiles/visualizer.dir/src/voxel_grid.cpp.o
 
 
-CMakeFiles/visualizer.dir/src/load_pcd.cpp.o: CMakeFiles/visualizer.dir/flags.make
-CMakeFiles/visualizer.dir/src/load_pcd.cpp.o: ../src/load_pcd.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luish/Schoolz/SD/VyperSpace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/visualizer.dir/src/load_pcd.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/visualizer.dir/src/load_pcd.cpp.o -c /home/luish/Schoolz/SD/VyperSpace/src/load_pcd.cpp
-
-CMakeFiles/visualizer.dir/src/load_pcd.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/visualizer.dir/src/load_pcd.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luish/Schoolz/SD/VyperSpace/src/load_pcd.cpp > CMakeFiles/visualizer.dir/src/load_pcd.cpp.i
-
-CMakeFiles/visualizer.dir/src/load_pcd.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/visualizer.dir/src/load_pcd.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luish/Schoolz/SD/VyperSpace/src/load_pcd.cpp -o CMakeFiles/visualizer.dir/src/load_pcd.cpp.s
-
-CMakeFiles/visualizer.dir/src/load_pcd.cpp.o.requires:
-
-.PHONY : CMakeFiles/visualizer.dir/src/load_pcd.cpp.o.requires
-
-CMakeFiles/visualizer.dir/src/load_pcd.cpp.o.provides: CMakeFiles/visualizer.dir/src/load_pcd.cpp.o.requires
-	$(MAKE) -f CMakeFiles/visualizer.dir/build.make CMakeFiles/visualizer.dir/src/load_pcd.cpp.o.provides.build
-.PHONY : CMakeFiles/visualizer.dir/src/load_pcd.cpp.o.provides
-
-CMakeFiles/visualizer.dir/src/load_pcd.cpp.o.provides.build: CMakeFiles/visualizer.dir/src/load_pcd.cpp.o
-
-
 CMakeFiles/visualizer.dir/src/plane_seg.cpp.o: CMakeFiles/visualizer.dir/flags.make
 CMakeFiles/visualizer.dir/src/plane_seg.cpp.o: ../src/plane_seg.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luish/Schoolz/SD/VyperSpace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/visualizer.dir/src/plane_seg.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luish/Schoolz/SD/VyperSpace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/visualizer.dir/src/plane_seg.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/visualizer.dir/src/plane_seg.cpp.o -c /home/luish/Schoolz/SD/VyperSpace/src/plane_seg.cpp
 
 CMakeFiles/visualizer.dir/src/plane_seg.cpp.i: cmake_force
@@ -227,7 +179,7 @@ CMakeFiles/visualizer.dir/src/plane_seg.cpp.o.provides.build: CMakeFiles/visuali
 
 CMakeFiles/visualizer.dir/src/cluster_extraction.cpp.o: CMakeFiles/visualizer.dir/flags.make
 CMakeFiles/visualizer.dir/src/cluster_extraction.cpp.o: ../src/cluster_extraction.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luish/Schoolz/SD/VyperSpace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/visualizer.dir/src/cluster_extraction.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luish/Schoolz/SD/VyperSpace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/visualizer.dir/src/cluster_extraction.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/visualizer.dir/src/cluster_extraction.cpp.o -c /home/luish/Schoolz/SD/VyperSpace/src/cluster_extraction.cpp
 
 CMakeFiles/visualizer.dir/src/cluster_extraction.cpp.i: cmake_force
@@ -251,7 +203,7 @@ CMakeFiles/visualizer.dir/src/cluster_extraction.cpp.o.provides.build: CMakeFile
 
 CMakeFiles/visualizer.dir/src/passthrough.cpp.o: CMakeFiles/visualizer.dir/flags.make
 CMakeFiles/visualizer.dir/src/passthrough.cpp.o: ../src/passthrough.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luish/Schoolz/SD/VyperSpace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/visualizer.dir/src/passthrough.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luish/Schoolz/SD/VyperSpace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/visualizer.dir/src/passthrough.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/visualizer.dir/src/passthrough.cpp.o -c /home/luish/Schoolz/SD/VyperSpace/src/passthrough.cpp
 
 CMakeFiles/visualizer.dir/src/passthrough.cpp.i: cmake_force
@@ -275,7 +227,7 @@ CMakeFiles/visualizer.dir/src/passthrough.cpp.o.provides.build: CMakeFiles/visua
 
 CMakeFiles/visualizer.dir/src/shape_detection.cpp.o: CMakeFiles/visualizer.dir/flags.make
 CMakeFiles/visualizer.dir/src/shape_detection.cpp.o: ../src/shape_detection.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luish/Schoolz/SD/VyperSpace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/visualizer.dir/src/shape_detection.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luish/Schoolz/SD/VyperSpace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/visualizer.dir/src/shape_detection.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/visualizer.dir/src/shape_detection.cpp.o -c /home/luish/Schoolz/SD/VyperSpace/src/shape_detection.cpp
 
 CMakeFiles/visualizer.dir/src/shape_detection.cpp.i: cmake_force
@@ -299,7 +251,7 @@ CMakeFiles/visualizer.dir/src/shape_detection.cpp.o.provides.build: CMakeFiles/v
 
 CMakeFiles/visualizer.dir/src/correspondence_grouping.cpp.o: CMakeFiles/visualizer.dir/flags.make
 CMakeFiles/visualizer.dir/src/correspondence_grouping.cpp.o: ../src/correspondence_grouping.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luish/Schoolz/SD/VyperSpace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/visualizer.dir/src/correspondence_grouping.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luish/Schoolz/SD/VyperSpace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/visualizer.dir/src/correspondence_grouping.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/visualizer.dir/src/correspondence_grouping.cpp.o -c /home/luish/Schoolz/SD/VyperSpace/src/correspondence_grouping.cpp
 
 CMakeFiles/visualizer.dir/src/correspondence_grouping.cpp.i: cmake_force
@@ -323,7 +275,7 @@ CMakeFiles/visualizer.dir/src/correspondence_grouping.cpp.o.provides.build: CMak
 
 CMakeFiles/visualizer.dir/src/outputPoints.cpp.o: CMakeFiles/visualizer.dir/flags.make
 CMakeFiles/visualizer.dir/src/outputPoints.cpp.o: ../src/outputPoints.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luish/Schoolz/SD/VyperSpace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/visualizer.dir/src/outputPoints.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luish/Schoolz/SD/VyperSpace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/visualizer.dir/src/outputPoints.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/visualizer.dir/src/outputPoints.cpp.o -c /home/luish/Schoolz/SD/VyperSpace/src/outputPoints.cpp
 
 CMakeFiles/visualizer.dir/src/outputPoints.cpp.i: cmake_force
@@ -350,9 +302,7 @@ visualizer_OBJECTS = \
 "CMakeFiles/visualizer.dir/src/visual.cpp.o" \
 "CMakeFiles/visualizer.dir/src/rewtMain.cpp.o" \
 "CMakeFiles/visualizer.dir/src/CloudVisualizer.cpp.o" \
-"CMakeFiles/visualizer.dir/src/random_sample_consensus.cpp.o" \
 "CMakeFiles/visualizer.dir/src/voxel_grid.cpp.o" \
-"CMakeFiles/visualizer.dir/src/load_pcd.cpp.o" \
 "CMakeFiles/visualizer.dir/src/plane_seg.cpp.o" \
 "CMakeFiles/visualizer.dir/src/cluster_extraction.cpp.o" \
 "CMakeFiles/visualizer.dir/src/passthrough.cpp.o" \
@@ -366,9 +316,7 @@ visualizer_EXTERNAL_OBJECTS =
 visualizer: CMakeFiles/visualizer.dir/src/visual.cpp.o
 visualizer: CMakeFiles/visualizer.dir/src/rewtMain.cpp.o
 visualizer: CMakeFiles/visualizer.dir/src/CloudVisualizer.cpp.o
-visualizer: CMakeFiles/visualizer.dir/src/random_sample_consensus.cpp.o
 visualizer: CMakeFiles/visualizer.dir/src/voxel_grid.cpp.o
-visualizer: CMakeFiles/visualizer.dir/src/load_pcd.cpp.o
 visualizer: CMakeFiles/visualizer.dir/src/plane_seg.cpp.o
 visualizer: CMakeFiles/visualizer.dir/src/cluster_extraction.cpp.o
 visualizer: CMakeFiles/visualizer.dir/src/passthrough.cpp.o
@@ -455,7 +403,7 @@ visualizer: /usr/lib/libvtkFiltering.so.5.10.1
 visualizer: /usr/lib/libvtkCommon.so.5.10.1
 visualizer: /usr/lib/libvtksys.so.5.10.1
 visualizer: CMakeFiles/visualizer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/luish/Schoolz/SD/VyperSpace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable visualizer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/luish/Schoolz/SD/VyperSpace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable visualizer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/visualizer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -466,9 +414,7 @@ CMakeFiles/visualizer.dir/build: visualizer
 CMakeFiles/visualizer.dir/requires: CMakeFiles/visualizer.dir/src/visual.cpp.o.requires
 CMakeFiles/visualizer.dir/requires: CMakeFiles/visualizer.dir/src/rewtMain.cpp.o.requires
 CMakeFiles/visualizer.dir/requires: CMakeFiles/visualizer.dir/src/CloudVisualizer.cpp.o.requires
-CMakeFiles/visualizer.dir/requires: CMakeFiles/visualizer.dir/src/random_sample_consensus.cpp.o.requires
 CMakeFiles/visualizer.dir/requires: CMakeFiles/visualizer.dir/src/voxel_grid.cpp.o.requires
-CMakeFiles/visualizer.dir/requires: CMakeFiles/visualizer.dir/src/load_pcd.cpp.o.requires
 CMakeFiles/visualizer.dir/requires: CMakeFiles/visualizer.dir/src/plane_seg.cpp.o.requires
 CMakeFiles/visualizer.dir/requires: CMakeFiles/visualizer.dir/src/cluster_extraction.cpp.o.requires
 CMakeFiles/visualizer.dir/requires: CMakeFiles/visualizer.dir/src/passthrough.cpp.o.requires

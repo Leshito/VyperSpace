@@ -18,15 +18,11 @@ Eigen/Core
 
 ../include/correspondence_grouping.h
 
-../include/load_pcd.h
-
 ../include/outputPoints.h
 
 ../include/passthrough.h
 
 ../include/plane_seg.h
-
-../include/random_sample_consensus.h
 
 ../include/rewtMain.h
 
@@ -208,22 +204,6 @@ pcl/common/transforms.h
 pcl/console/parse.h
 -
 
-/home/luish/Schoolz/SD/VyperSpace/src/load_pcd.cpp
-CloudVisualizer.h
-/home/luish/Schoolz/SD/VyperSpace/src/CloudVisualizer.h
-pcl/point_cloud.h
--
-pcl/point_types.h
--
-pcl/io/pcd_io.h
--
-pcl/io/ply_io.h
--
-pcl/common/time.h
--
-load_pcd.h
-/home/luish/Schoolz/SD/VyperSpace/src/load_pcd.h
-
 /home/luish/Schoolz/SD/VyperSpace/src/outputPoints.cpp
 iostream
 -
@@ -284,32 +264,6 @@ pcl/visualization/cloud_viewer.h
 iostream
 -
 
-/home/luish/Schoolz/SD/VyperSpace/src/random_sample_consensus.cpp
-iostream
--
-pcl/console/parse.h
--
-pcl/filters/extract_indices.h
--
-pcl/io/pcd_io.h
--
-pcl/point_types.h
--
-pcl/sample_consensus/ransac.h
--
-pcl/sample_consensus/sac_model_plane.h
--
-pcl/sample_consensus/sac_model_sphere.h
--
-pcl/visualization/pcl_visualizer.h
--
-boost/thread/thread.hpp
--
-random_sample_consensus.h
-/home/luish/Schoolz/SD/VyperSpace/src/random_sample_consensus.h
-shape_detection.h
-/home/luish/Schoolz/SD/VyperSpace/src/shape_detection.h
-
 /home/luish/Schoolz/SD/VyperSpace/src/rewtMain.cpp
 iostream
 -
@@ -343,12 +297,8 @@ boost/thread/thread.hpp
 -
 pcl/filters/voxel_grid.h
 -
-random_sample_consensus.h
-/home/luish/Schoolz/SD/VyperSpace/src/random_sample_consensus.h
 voxel_grid.h
 /home/luish/Schoolz/SD/VyperSpace/src/voxel_grid.h
-load_pcd.h
-/home/luish/Schoolz/SD/VyperSpace/src/load_pcd.h
 plane_seg.h
 /home/luish/Schoolz/SD/VyperSpace/src/plane_seg.h
 cluster_extraction.h
