@@ -1,0 +1,3 @@
+/home/luish/Schoolz/SD/VyperSpace/build/CMakeFiles/rebuild_cache.dir
+/home/luish/Schoolz/SD/VyperSpace/build/CMakeFiles/edit_cache.dir
+/home/luish/Schoolz/SD/VyperSpace/build/CMakeFiles/visualizer.dir
