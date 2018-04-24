@@ -86,7 +86,7 @@ void getDimensionsTransform(
     rotation_vector = (xy_plane_normal_vector.cross(floor_plane_normal_vector)).normalized();
 
 	float theta = -atan2(rotation_vector.norm(), xy_plane_normal_vector.dot(floor_plane_normal_vector));
-    //float theta = acos(floor_plane_normal_vector.dot(xy_plane_normal_vector)/sqrt( pow(a,2)+ pow(b,2) + pow(c,2)));
+    
   	pcl::PointCloud<pcl::PointXYZRGBA>::Ptr transformed_cloud (new pcl::PointCloud<pcl::PointXYZRGBA> ());
   	Eigen::Affine3f transform_1 = Eigen::Affine3f::Identity();
     transform_1.rotate (Eigen::AngleAxisf (theta, rotation_vector));

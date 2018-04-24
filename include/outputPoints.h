@@ -7,4 +7,9 @@ void getDimensions(
 	pcl::PointCloud<pcl::PointXYZRGBA>::Ptr cloud,
 	float heightWidth[]);
 
+void getDimensionsTransform(
+ 	float plane[],
+	pcl::PointCloud<pcl::PointXYZRGBA>::Ptr cloud,
+	float heightWidth[]);
+
 #endif

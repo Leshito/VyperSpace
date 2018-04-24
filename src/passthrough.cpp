@@ -11,9 +11,8 @@ int passthroughfilter (pcl::PointCloud<pcl::PointXYZRGBA>::Ptr cloud,pcl::PointC
   pcl::PassThrough<pcl::PointXYZRGBA> pass;
   pass.setInputCloud (cloud);
   pass.setFilterFieldName ("z");
-  pass.setFilterLimits (0.0, 1.2);
+  pass.setFilterLimits (0.4, 1.2);
 
-  //pass.setFilterLimitsNegative (true);
   pass.filter (*cloud_filtered);
 
   pass.setInputCloud(cloud_filtered);

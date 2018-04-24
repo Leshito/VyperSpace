@@ -12,23 +12,10 @@
 
 int planeSeg(pcl::PointCloud<pcl::PointXYZRGBA>::Ptr cloud, pcl::PointCloud<pcl::PointXYZRGBA>::Ptr objects, float planeCoe[])
 {
-	//char* filename = argv[1];
 
 	// Objects for storing the point clouds.
-	//pcl::PointCloud<pcl::PointXYZRGBA>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZRGBA>);
 	pcl::PointCloud<pcl::PointXYZRGBA>::Ptr plane(new pcl::PointCloud<pcl::PointXYZRGBA>);
 	pcl::PointCloud<pcl::PointXYZRGBA>::Ptr convexHull(new pcl::PointCloud<pcl::PointXYZRGBA>);
-	//pcl::PointCloud<pcl::PointXYZRGBA>::Ptr objects(new pcl::PointCloud<pcl::PointXYZRGBA>);
-
-	// Read a PCD file from disk.
-	/*if (pcl::io::loadPCDFile<pcl::PointXYZRGBA>(argv[1], *cloud) != 0)
-	{
-		return -1;
-	}*/
-
-	//pcl::PCDReader reader;
-
-	//reader.read(filename, *cloud);
 
 	// Get the plane model, if present.
 	pcl::ModelCoefficients::Ptr coefficients(new pcl::ModelCoefficients);
@@ -41,8 +28,6 @@ int planeSeg(pcl::PointCloud<pcl::PointXYZRGBA>::Ptr cloud, pcl::PointCloud<pcl:
 	pcl::PointIndices::Ptr planeIndices(new pcl::PointIndices);
 	segmentation.segment(*planeIndices, *coefficients);
 
-	//Possibly divide by d for some reason
-	//printf("a: %f, b: %f, c: %f\n", coefficients->values[0], coefficients->values[1], coefficients->values[2]);
 	planeCoe[0] = coefficients->values[0];
 	planeCoe[1] = coefficients->values[1];
 	planeCoe[2] = coefficients->values[2];
@@ -73,8 +58,8 @@ int planeSeg(pcl::PointCloud<pcl::PointXYZRGBA>::Ptr cloud, pcl::PointCloud<pcl:
 			pcl::ExtractPolygonalPrismData<pcl::PointXYZRGBA> prism;
 			prism.setInputCloud(cloud);
 			prism.setInputPlanarHull(convexHull);
-			// First parameter: minimum Z value. Set to 0, segments objects lying on the plane (can be negative).
-			// Second parameter: maximum Z value, set to 10cm. Tune it according to the height of the objects you expect.
+			// First parameter: minimum Z value. Set to 0.01m, segments objects lying on the plane (can be negative).
+			// Second parameter: maximum Z value, set to 1m. Tune it according to the height of the objects you expect.
 			prism.setHeightLimits(0.01f, 1.0f);
 			pcl::PointIndices::Ptr objectIndices(new pcl::PointIndices);
 
@@ -83,17 +68,8 @@ int planeSeg(pcl::PointCloud<pcl::PointXYZRGBA>::Ptr cloud, pcl::PointCloud<pcl:
 			// Get and show all points retrieved by the hull.
 			extract.setIndices(objectIndices);
 			extract.filter(*objects);
-			//pcl::visualization::CloudViewer viewerObjects("Objects on table");
-			//viewerObjects.showCloud(objects);
-			//while (!viewerObjects.wasStopped())
-			//{
-				// Do nothing but wait.
-			//}
 		}
 		else std::cout << "The chosen hull is not planar." << std::endl;
 	}
 	
-	//pcl::PCDWriter writer;
-	//writer.write ("/home/luish/Schoolz/SD/Project/pcdFiles/objectsOnTable.pcd", *objects, 
-    // false);
 }

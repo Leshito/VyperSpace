@@ -12,10 +12,5 @@ int voxelfilter(pcl::PointCloud<pcl::PointXYZRGBA>::Ptr cloud,pcl::PointCloud<pc
   sor.setLeafSize(0.001f, 0.001f, 0.001f);
   sor.filter(*cloudFiltered);
 
-  //std::cerr << "PointCloud after filtering: " << cloudFiltered->width * cloudFiltered->height
-    //  << " data points (" << pcl::getFieldsList (*cloudFiltered) << ")." << "\n";
-
-
-
   return (0);
 }
