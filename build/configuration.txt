@@ -1,0 +1,6 @@
+#Box Parameters and PassThrough Parameters
+#XMAX  XMIN YMAX YMIN ZMAX ZMIN
+0.155 -0.15 0.05 -0.3 1.2  0.4
+#Cluster Extraction Parameters
+#Minimum_Cluster_Size Maximum_Cluster_Size
+ 580                  15000

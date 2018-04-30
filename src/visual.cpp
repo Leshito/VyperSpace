@@ -13,6 +13,9 @@
 #include <thread>
 #include <chrono>
 #include <poll.h>
+#include <fstream>
+#include <string>
+
 
 #include <pcl/io/openni2_grabber.h>
 #include <pcl/visualization/cloud_viewer.h>
@@ -20,12 +23,16 @@
 #include <pcl/point_types.h>
 #include <pcl/common/common.h>
 #include <pcl/common/time.h>
+//#include <boost/make_shared.hpp>
+#include <pcl/point_cloud.h>
 #include <pcl/io/pcd_io.h>
 #include "CloudVisualizer.h"
 #include "rewtMain.h"
+#include "armGrabber.h"
 
 using namespace std;
-
+typedef pcl::PointCloud<pcl::PointXYZRGBA> CloudT;
+pcl::PointCloud<pcl::PointXYZRGBA>::Ptr armPtr (new pcl::PointCloud<pcl::PointXYZRGBA>);
 //the bounds of the passthrough filter
 float zmin = 0.4, zmax = 1.2, ymin = -0.3, ymax = 0.05, xmin = -0.15, xmax = 0.155;
 
@@ -53,7 +60,7 @@ void drawWorkSpace(pcl::visualization::PCLVisualizer& viewer)
 		viewer.addLine<pcl::PointXYZRGBA> (cornerBBL, cornerBBR, 255, 0, 0, "BBLtoBBR");
 		viewer.addLine<pcl::PointXYZRGBA> (cornerBBL, cornerFBL, 255, 0, 0, "BBLtoFBL");
 		viewer.addLine<pcl::PointXYZRGBA> (cornerBTR, cornerBBR, 255, 0, 0, "BTRtoBBR");
-		
+
 
 }
 
@@ -92,12 +99,12 @@ public:
      * @author Christopher D. McMurrough
      **********************************************************************************************************************/
     void run()
-    {	
+    {
 
 
         // create a new grabber for OpenNI2 devices
         pcl::Grabber* interface = new pcl::io::OpenNI2Grabber();
-        
+
         // bind the callbacks to the appropriate member functions
         boost::function<void (const pcl::PointCloud<pcl::PointXYZRGBA>::ConstPtr&)> f = boost::bind(&OpenNI2Processor::cloudCallback, this, _1);
 
@@ -121,16 +128,21 @@ public:
         // stop the grabber
         interface->stop();
     }
-
+  pcl::PCDWriter writer;
     /***********************************************************************************************************************
      * @brief Callback function for received cloud data
      * @param[in] cloudIn the raw cloud data received by the OpenNI2 device
      * @author Christopher D. McMurrough
      **********************************************************************************************************************/
     void cloudCallback(const pcl::PointCloud<pcl::PointXYZRGBA>::ConstPtr &cloudIn)
-    {	
+    {
+			//printf("print\n");
+         //std::vector < pcl::PointCloud<pcl::PointXYZRGBA>::Ptr, Eigen::aligned_allocator <pcl::PointCloud <pcl::PointXYZRGBA>::Ptr > > armSnap;
+        //CloudT::Ptr arm(new CloudT);
+				//pcl::PointCloud<pcl::PointXYZRGBA> arm;
 
-        // get the elapsed time since the last callback
+				//armPtr = arm.makeShared();
+				        // get the elapsed time since the last callback
         double elapsedTime = m_stopWatch.getTimeSeconds();
         m_stopWatch.reset();
 
@@ -139,8 +151,17 @@ public:
             scanf("%c", &input);
             if (input == 'v')
             {
-		  		m_viewer.showCloud(cloudIn);
-                rewtMain(cloudIn);
+		  		      m_viewer.showCloud(cloudIn);
+                writer.write<pcl::PointXYZRGBA> ("arm_before_rewt.pcd", *armPtr, false);
+                	rewtMain(cloudIn,armPtr);
+
+
+                while ((getchar()) != '\n');
+            }
+						else if (input == 'a')
+            {
+		  		      m_viewer.showCloud(cloudIn);
+                armPtr = armGrabber(cloudIn);
                 while ((getchar()) != '\n');
             }
         }
@@ -160,38 +181,84 @@ public:
  **********************************************************************************************************************/
 int main (int argc, char** argv)
 {
+	string line;
+	string tok;
+char *tokens;
+float boxParams[6] = {0, 0, 0, 0, 0, 0};
+double x;
 
-	cornerFTL.x = xmin;
-	cornerFTL.y = ymax;
-	cornerFTL.z = zmin;
 
-	cornerFTR.x = xmax;
-	cornerFTR.y = ymax;
-	cornerFTR.z = zmin;
 
-	cornerFBL.x = xmin;
-	cornerFBL.y = ymin;
-	cornerFBL.z = zmin;
 
-	cornerFBR.x = xmax;
-	cornerFBR.y = ymin;
-	cornerFBR.z = zmin;
 
-	cornerBTL.x = xmin;
-	cornerBTL.y = ymax;
-	cornerBTL.z = zmax;
+ifstream inconfig;
+inconfig.open("configuration.txt");
+if (inconfig.is_open())
+{
+	getline(inconfig, line);
+	getline(inconfig, line);
+	getline(inconfig, line);
+	std::cout << line << std::endl;
+	std::stringstream stream(line);
 
-	cornerBTR.x = xmax;
-	cornerBTR.y = ymax;
-	cornerBTR.z = zmax;
+	//stream >> space;
+	//std::cout << space << std::endl;
+	//stream >> space;
+	//std::cout << space << std::endl;
+	int it=0;
+//	stream >> tok;
+	//std::cout << tok << std::endl;
+	//std::cout << "Mu dfja;skdlfj;s\n";
+	while (stream)
+	{
+		stream >> boxParams[it];
+		//boxParams[it]= std::stof(tok);
+		//stream >> space;
+		//std::cout << boxParams[it] << std::endl;
+		//boxParams[it]= x;
+		//std::cout << boxParams[it] << std::endl;
+		it++;
+	}
 
-	cornerBBL.x = xmin;
-	cornerBBL.y = ymin;
-	cornerBBL.z = zmax;
+	for(int x=0; x<6;x++)
+		std::cout << boxParams[x] << std::endl;
+	inconfig.close();
+}
+  //boxParams contents
+	// [0]  [1] [2]  [3]  [4]  [5]
+	//xmax xmin ymax ymin zmax zmin
 
-	cornerBBR.x = xmax;
-	cornerBBR.y = ymin;
-	cornerBBR.z = zmax;
+	cornerFTL.x = boxParams[1];
+	cornerFTL.y = boxParams[2];
+	cornerFTL.z = boxParams[5];
+
+	cornerFTR.x = boxParams[0];
+	cornerFTR.y = boxParams[2];
+	cornerFTR.z = boxParams[5];
+
+	cornerFBL.x = boxParams[1];
+	cornerFBL.y = boxParams[3];
+	cornerFBL.z = boxParams[5];
+
+	cornerFBR.x = boxParams[0];
+	cornerFBR.y = boxParams[3];
+	cornerFBR.z = boxParams[5];
+
+	cornerBTL.x = boxParams[1];
+	cornerBTL.y = boxParams[2];
+	cornerBTL.z = boxParams[4];
+
+	cornerBTR.x = boxParams[0];
+	cornerBTR.y = boxParams[2];
+	cornerBTR.z = boxParams[4];
+
+	cornerBBL.x = boxParams[1];
+	cornerBBL.y = boxParams[3];
+	cornerBBL.z = boxParams[4];
+
+	cornerBBR.x = boxParams[0];
+	cornerBBR.y = boxParams[3];
+	cornerBBR.z = boxParams[4];
 
     // create the processing object
     OpenNI2Processor ONI2Processor;
