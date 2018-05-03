@@ -43,7 +43,7 @@ void getDimensions(
 				max = dist;
 				farthest = pt;
 			}
-		}		
+		}
 	}
 
 
@@ -61,7 +61,7 @@ void getDimensions(
 
 	heightWidth[1] = maxs.x - mins.x;
 
-	
+
 }
 
 void getDimensionsTransform(
@@ -86,14 +86,14 @@ void getDimensionsTransform(
     rotation_vector = (xy_plane_normal_vector.cross(floor_plane_normal_vector)).normalized();
 
 	float theta = -atan2(rotation_vector.norm(), xy_plane_normal_vector.dot(floor_plane_normal_vector));
-    
+
   	pcl::PointCloud<pcl::PointXYZRGBA>::Ptr transformed_cloud (new pcl::PointCloud<pcl::PointXYZRGBA> ());
   	Eigen::Affine3f transform_1 = Eigen::Affine3f::Identity();
     transform_1.rotate (Eigen::AngleAxisf (theta, rotation_vector));
   	pcl::transformPointCloud(*cloud, *transformed_cloud, transform_1);
 
-  	pcl::PCDWriter writer;
-  	writer.write<pcl::PointXYZRGBA> ("transform.pcd", *transformed_cloud, false);
+  	//pcl::PCDWriter writer;
+  	//writer.write<pcl::PointXYZRGBA> ("transform.pcd", *transformed_cloud, false);
 	pcl::PointXYZRGBA mins;
 	pcl::PointXYZRGBA maxs;
 

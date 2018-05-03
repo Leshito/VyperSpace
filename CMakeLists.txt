@@ -16,8 +16,11 @@ add_definitions(${PCL_DEFINITIONS})
 
 #file(GLOB SOURCES src/*.cpp)
 
-add_executable (visualizer src/visual.cpp src/rewtMain.cpp src/CloudVisualizer.cpp src/voxel_grid.cpp src/plane_seg.cpp src/cluster_extraction.cpp src/passthrough.cpp src/shape_detection.cpp src/correspondence_grouping.cpp src/outputPoints.cpp)
+add_executable (visualizer src/visual.cpp src/rewtMain.cpp src/CloudVisualizer.cpp src/voxel_grid.cpp src/plane_seg.cpp src/cluster_extraction.cpp src/passthrough.cpp src/shape_detection.cpp src/correspondence_grouping.cpp src/outputPoints.cpp src/armGrabber.cpp)
 target_link_libraries (visualizer ${PCL_LIBRARIES})
+
+set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_BUILD_TYPE RelWithDebInfo)
 
 #add_executable (openni2_snapper src/openni2_snapper.cpp)
 #target_link_libraries (openni2_snapper ${PCL_LIBRARIES})
