@@ -9,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/visualizer.dir/src/shape_detection.cpp.o"
   "CMakeFiles/visualizer.dir/src/correspondence_grouping.cpp.o"
   "CMakeFiles/visualizer.dir/src/outputPoints.cpp.o"
+  "CMakeFiles/visualizer.dir/src/armGrabber.cpp.o"
   "visualizer.pdb"
   "visualizer"
 )

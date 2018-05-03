@@ -1,6 +1,9 @@
 #Box Parameters and PassThrough Parameters
 #XMAX  XMIN YMAX YMIN ZMAX ZMIN
-0.155 -0.15 0.05 -0.3 1.2  0.4
+0.155 -0.15 0.05 -0.3 1.0  0.4
 #Cluster Extraction Parameters
 #Minimum_Cluster_Size Maximum_Cluster_Size
- 580                  15000
+ 1200                  15000
+ #Correspondence Params
+ #model_ss scene_ss rf_rad descr_rad cg_size cg_thresh
+    0.01     0.03   0.075   0.08       0.01     5.0

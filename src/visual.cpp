@@ -152,7 +152,8 @@ public:
             if (input == 'v')
             {
 		  		      m_viewer.showCloud(cloudIn);
-                writer.write<pcl::PointXYZRGBA> ("arm_before_rewt.pcd", *armPtr, false);
+                writer.write<pcl::PointXYZRGBA> ("scene.pcd", *cloudIn, false);
+								writer.write<pcl::PointXYZRGBA> ("object.pcd", *armPtr, false);
                 	rewtMain(cloudIn,armPtr);
 
 
@@ -201,22 +202,11 @@ if (inconfig.is_open())
 	std::cout << line << std::endl;
 	std::stringstream stream(line);
 
-	//stream >> space;
-	//std::cout << space << std::endl;
-	//stream >> space;
-	//std::cout << space << std::endl;
 	int it=0;
-//	stream >> tok;
-	//std::cout << tok << std::endl;
-	//std::cout << "Mu dfja;skdlfj;s\n";
+
 	while (stream)
 	{
 		stream >> boxParams[it];
-		//boxParams[it]= std::stof(tok);
-		//stream >> space;
-		//std::cout << boxParams[it] << std::endl;
-		//boxParams[it]= x;
-		//std::cout << boxParams[it] << std::endl;
 		it++;
 	}
 
@@ -224,9 +214,7 @@ if (inconfig.is_open())
 		std::cout << boxParams[x] << std::endl;
 	inconfig.close();
 }
-  //boxParams contents
-	// [0]  [1] [2]  [3]  [4]  [5]
-	//xmax xmin ymax ymin zmax zmin
+
 
 	cornerFTL.x = boxParams[1];
 	cornerFTL.y = boxParams[2];
